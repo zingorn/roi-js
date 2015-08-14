@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta content='width=1024' name='viewport'>
+    <style>
+        html,body { height: 100%; margin: 0px; padding: 0px; }
+        .thumb {
+            width: 150px;
+        }
+        table td {
+            vertical-align:top;
+            border-spacing: 5px;
+        }
+        .image-fix-d {
+            background-position:50% 50%;
+            background-size:contain;
+            background-repeat: no-repeat;
+        }
+        .image-fix-d img{
+            position: absolute;
+            margin: auto 50%;
+            top: 50%;
+        }
+        .image-fix {
+            background-position:50% 50%;
+            background-size:contain;
+            background-repeat: no-repeat;
+            height: 100%;
+        }
+        .image-fix img {
+            width: 1px;
+            height: 1px;
+            position: absolute;
+            top: -1000000px;
+        }
+        div.photo {
+           height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div style="position:absolute;width: 100%; height: 100%;display: none" class="image-fix-d"><img src="/img/loader.gif" width="32" height="32" border="0"></div>
+    <input id="flickr-api" type="text" placeholder="Flickr token" value="47574f690db1fb332d96526681699782" /><button id="flickr-token">Refresh</button>
+    <div id="app">
+        <section id="photos"></section>
+        <section id="photo"></section>
+    </div>
+    <script data-main="js/app" src="node_modules/requirejs/require.js"></script>
+</body>
+</html>
